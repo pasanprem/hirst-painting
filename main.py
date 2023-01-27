@@ -21,19 +21,17 @@ color_list = [(202, 164, 110), (236, 239, 243), (149, 75, 50), (222, 201, 136), 
 t = Turtle()
 screen = Screen()
 screen.colormode(255)
-# print(t.pos())
 t.speed(0)
 x = -200.0
 y = -200.0
 t.penup()
+t.hideturtle()
 
 def fill_circle():
     t.color(random.choice(color_list))
-    t.pendown()
     t.begin_fill()
     t.circle((10))
     t.end_fill()
-    t.penup()
 
 for row in range(0, 10):
     t.setposition(x, y + (row * 50))
